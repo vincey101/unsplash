@@ -39,7 +39,6 @@ export const getPhotos = async (page: number = 1, perPage: number = 10) => {
         order_by: 'latest'
       }
     });
-    console.log('Get Photos Response:', JSON.stringify(response.data, null, 2));
     return response.data;
   } catch (error) {
     throw error;
@@ -55,7 +54,6 @@ export const searchPhotos = async (query: string, page: number = 1, perPage: num
         per_page: perPage
       }
     });
-    console.log('Search Photos Response:', JSON.stringify(response.data.results, null, 2));
     return response.data.results;
   } catch (error) {
     throw error;
